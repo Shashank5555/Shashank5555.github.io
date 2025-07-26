@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--
+    Portfolio website for Sai Shashank Yerra. This simple static site
+    showcases a data scientist’s education, experience, projects and skills.
+    It is inspired by clean, modern portfolio designs such as Konpo Studio
+    while staying focused on data‑science content. Feel free to customise
+    names, colours and content as needed.
+  -->
+  <title>Sai Shashank Yerra | Data Scientist &amp; Developer</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- TailwindCSS CDN for utility classes and additional animations -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.4/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- External animation libraries -->
+  <!-- GSAP for rich timeline animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <!-- GSAP ScrollTrigger plugin for scroll‑based animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+  <!-- Particles.js for interactive background animations -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
+  <!-- VanillaTilt for subtle 3D tilt on cards -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js" defer></script>
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header id="header">
+    <div class="container">
+      <div class="logo"><a href="#home">Sai Shashank</a></div>
+      <nav>
+        <ul id="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <!-- Added a Certifications link so it appears alongside other sections in the header navigation -->
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero" data-animate="fade-up">
+    <!-- Interactive particle background.  The particles.js library targets this container to
+         render a field of dynamic particles behind the hero content.  See script.js
+         for the configuration loaded at runtime. -->
+    <div id="particles-js" class="hero-bg"></div>
+    <!-- Blurry abstract blobs add depth and dimension reminiscent of Konpo’s playful shapes. -->
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Hi, I'm Sai Shashank Yerra</h1>
+      <p class="subtitle">I am a <span id="job-title"></span></p>
+      <p class="description">Harnessing data, machine learning and modern web technologies to build intelligent products.</p>
+      <a href="#projects" class="btn btn-primary">View My Work</a>
+      <a href="resume.pdf" class="btn btn-secondary" download style="margin-left: 12px;">Download Resume</a>
+    </div>
+    <!-- Scroll indicator encourages the user to explore further down the page. -->
+    <div class="scroll-indicator">
+      <span class="scroll-line"></span>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about section" data-animate="fade-up">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <div class="about-image">
+          <img src="images/about-placeholder.jpg" alt="Portrait of Sai Shashank Yerra" />
+        </div>
+        <div class="about-text">
+          <p>
+            I am a data scientist and software developer based in Baltimore, Maryland. I earned my Master of Professional Studies in
+            Data Science from the University of Maryland, Baltimore County (UMBC) in May 2024, graduating with a GPA of 3.9/4.0.
+            Prior to that, I completed a Bachelor of Technology in Information Technology from Gayatri Vidya Parishad College of
+            Engineering in India.
+          </p>
+          <p>
+            Currently, I work as a Python Developer at LVTLABS, where I build cross‑platform apps and scalable microservices.
+            Previously, I served as a Systems Engineer at Tata Consultancy Services, developing automated processes and integrating
+            data from dozens of sources. My technical toolbox includes Python, JavaScript, SQL, FastAPI, FlutterFlow, Docker and
+            modern machine‑learning libraries.
+          </p>
+          <p>
+            I’m passionate about leveraging data to solve real‑world problems—whether that means creating personalized
+            recommendation systems, analysing social media to deliver targeted content, building accessible computer‑vision tools
+            or optimising healthcare outcomes with predictive models.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills section" data-animate="fade-up">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill">
+          <i class="fa-brands fa-python"></i>
+          <h3>Python</h3>
+        </div>
+        <div class="skill">
+          <i class="fa-solid fa-database"></i>
+          <h3>SQL &amp; PostgreSQL</h3>
+        </div>
+        <div class="skill">
+          <i class="fa-solid fa-chart-line"></i>
+          <h3>Data Viz (Matplotlib, Seaborn)</h3>
+        </div>
+        <div class="skill">
+          <i class="fa-solid fa-robot"></i>
+          <h3>Machine Learning</h3>
+        </div>
+        <div class="skill">
+          <i class="fa-solid fa-brain"></i>
+          <h3>Deep Learning &amp; LLMs</h3>
+        </div>
+        <div class="skill">
+          <i class="fa-brands fa-html5"></i>
+          <h3>Web Dev (HTML/CSS/JS)</h3>
+        </div>
+        <div class="skill">
+          <i class="fa-brands fa-docker"></i>
+          <h3>Docker &amp; Jenkins</h3>
+        </div>
+        <div class="skill">
+          <i class="fa-brands fa-git-alt"></i>
+          <h3>Git &amp; GitHub</h3>
+        </div>
+        <div class="skill">
+          <i class="fa-solid fa-cloud"></i>
+          <h3>Cloud (DigitalOcean)</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects section" data-animate="fade-up">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <!-- Book Recommendation System -->
+        <div class="project-card" data-animate="fade-up">
+          <div class="project-image">
+            <img src="images/project1.jpg" alt="Book Recommendation System">
+            <div class="project-overlay">
+              <h3>Book Recommendation System</h3>
+              <p>
+                Personalised book recommendation engine using web scraping,
+                large language models and a retrieval‑augmented generation (RAG)
+                strategy.
+              </p>
+            </div>
+          </div>
+          <div class="project-summary">
+            <h3>Book Recommendation System</h3>
+            <p>
+              An end‑to‑end recommendation engine that scrapes Goodreads,
+              processes data and uses LLMs to deliver tailored reading lists.
+            </p>
+            <a href="#" class="btn btn-secondary">Learn More</a>
+          </div>
+        </div>
+        <!-- Targeted Advertising Using Twitter Data -->
+        <div class="project-card" data-animate="fade-up">
+          <div class="project-image">
+            <img src="images/project2.jpg" alt="Targeted Advertising Using Twitter Data">
+            <div class="project-overlay">
+              <h3>Targeted Advertising via Tweets</h3>
+              <p>
+                Analyses Twitter data with Hugging Face transformers to infer
+                sentiments and deliver highly targeted ads.
+              </p>
+            </div>
+          </div>
+          <div class="project-summary">
+            <h3>Targeted Advertising via Tweets</h3>
+            <p>
+              Analyses user sentiments and interests from tweets to serve
+              personalised advertisements and content recommendations.
+            </p>
+            <a href="#" class="btn btn-secondary">Learn More</a>
+          </div>
+        </div>
+        <!-- Virtual Eye for the Blind -->
+        <div class="project-card" data-animate="fade-up">
+          <div class="project-image">
+            <img src="images/project4.jpg" alt="Virtual Eye for the Blind">
+            <div class="project-overlay">
+              <h3>Virtual Eye for the Blind</h3>
+              <p>
+                Computer‑vision app providing real‑time audio descriptions of
+                surroundings for visually impaired users.
+              </p>
+            </div>
+          </div>
+          <div class="project-summary">
+            <h3>Virtual Eye for the Blind</h3>
+            <p>
+              An assistive tool that combines object recognition and scene
+              understanding to enhance navigation for those with low vision.
+            </p>
+            <a href="#" class="btn btn-secondary">Learn More</a>
+          </div>
+        </div>
+        <!-- Medicare Payment Optimisation System -->
+        <div class="project-card" data-animate="fade-up">
+          <div class="project-image">
+            <img src="images/project3.jpg" alt="Medicare Payment Optimisation System">
+            <div class="project-overlay">
+              <h3>Medicare Payment Optimisation</h3>
+              <p>
+                Predictive modelling to optimise healthcare costs and improve
+                outcomes using complex Medicare datasets.
+              </p>
+            </div>
+          </div>
+          <div class="project-summary">
+            <h3>Medicare Payment Optimisation</h3>
+            <p>
+              Data‑driven recommendations that enhance financial planning and
+              resource allocation for more efficient healthcare.
+            </p>
+            <a href="#" class="btn btn-secondary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section (integrated into main page) -->
+  <section id="certifications" class="certifications section">
+    <div class="container">
+      <h2>Certifications</h2>
+      <div class="cert-grid">
+        <!-- Machine Learning -->
+        <div class="cert-card" data-animate="fade-up">
+          <div class="cert-image">
+            <img src="images/cert1.jpg" alt="Machine Learning Certificate">
+            <!-- Overlay appears on hover, revealing more details about the certificate -->
+            <div class="cert-overlay">
+              <h3>Machine Learning</h3>
+              <p>Stanford University (Coursera)</p>
+              <p class="cert-date">Jul&nbsp;2023</p>
+            </div>
+          </div>
+          <div class="cert-summary">
+            <h3>Machine Learning</h3>
+            <p>Stanford University (Coursera)</p>
+            <p class="cert-date">Jul&nbsp;2023</p>
+          </div>
+        </div>
+        <!-- Deep Learning Specialization -->
+        <div class="cert-card" data-animate="fade-up">
+          <div class="cert-image">
+            <img src="images/cert2.jpg" alt="Deep Learning Specialization">
+            <div class="cert-overlay">
+              <h3>Deep Learning Specialization</h3>
+              <p>DeepLearning.AI</p>
+              <p class="cert-date">Oct&nbsp;2023</p>
+            </div>
+          </div>
+          <div class="cert-summary">
+            <h3>Deep Learning Specialization</h3>
+            <p>DeepLearning.AI</p>
+            <p class="cert-date">Oct&nbsp;2023</p>
+          </div>
+        </div>
+        <!-- Applied Machine Learning in Python -->
+        <div class="cert-card" data-animate="fade-up">
+          <div class="cert-image">
+            <img src="images/cert3.jpg" alt="Applied Machine Learning in Python">
+            <div class="cert-overlay">
+              <h3>Applied Machine Learning in Python</h3>
+              <p>University of Michigan (Coursera)</p>
+              <p class="cert-date">Dec&nbsp;2022</p>
+            </div>
+          </div>
+          <div class="cert-summary">
+            <h3>Applied Machine Learning in Python</h3>
+            <p>University of Michigan (Coursera)</p>
+            <p class="cert-date">Dec&nbsp;2022</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact section">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="contact-info">
+        <p>If you’d like to collaborate or just say hello, feel free to reach out!</p>
+        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:saishashank15@gmail.com">saishashank15@gmail.com</a></p>
+        <p><i class="fa-solid fa-phone"></i> <a href="tel:+14439003611">(443) 900‑3611</a></p>
+        <p><i class="fa-solid fa-location-dot"></i> Baltimore, MD, USA</p>
+        <div class="social-links">
+          <!-- Updated social links to reflect my actual profiles and removed Twitter -->
+          <a href="https://github.com/Shashank5555" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/sai-shashank-yerra/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© <span id="year"></span> Sai Shashank Yerra. All rights reserved.</p>
+  </footer>
+
+  <!-- Custom Script -->
+  <script src="js/script.js"></script>
+
+  <!-- Custom cursor elements.  These are positioned and animated via CSS and
+       JavaScript to create a bespoke cursor and trailing follower that
+       responds to user interaction, reminiscent of high‑end design agency
+       sites. -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+</body>
+</html>
