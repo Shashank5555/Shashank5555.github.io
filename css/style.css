@@ -73,7 +73,7 @@ h1, h2, h3 {
 .btn-primary {
   background-color: var(--primary-color);
   color: #fff;
-  /* border: 2px solid transparent;  */
+  border: 2px solid transparent; 
 }
 .btn-primary:hover {
   background-color: var(--secondary-color);
